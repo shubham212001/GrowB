@@ -3,13 +3,13 @@ package com.sharma.growb.database
 import androidx.lifecycle.LiveData
 import androidx.room.*
 @Dao
-    interface dao {
+   public interface dao {
 
         @Insert
         suspend fun add_sales(input: sales_entity): Long
 
 
-        @Query("Select * from sales_entity order by EntryId DESC")
+        @Query("Select * from SalesTable order by EntryId DESC")
         fun get_all(): LiveData<List<sales_entity>>
 
 //        @Query("Select * from entity order by id ASC")
