@@ -27,7 +27,7 @@ class StockActivity : AppCompatActivity() {
         val db by lazy {
             database.getDatabase(this)
         }
-        add_sales_button.setOnClickListener {
+        nxtButton.setOnClickListener {
             val ItemID = item_id.text.toString()
             val NOP = nop.text.toString()
             val itemPrice = item_price.text.toString()

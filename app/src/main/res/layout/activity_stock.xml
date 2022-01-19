@@ -118,7 +118,7 @@
         android:orientation="horizontal" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/add_sales_button"
+        android:id="@+id/nxtButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|right"
