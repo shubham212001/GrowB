@@ -12,15 +12,21 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         supportActionBar?.hide()
-
+        var pref = applicationContext.getSharedPreferences("MyPref", MODE_PRIVATE)
+        var editor = pref.edit()
         nxtButton.setOnClickListener {
         if (FirmName.length() != 0 && nop.length() != 0 && contact.length() != 0) {
 
 
-
+            var companyName=FirmName.text.toString()
+            editor.putString("CompanyName", companyName);
+            editor.apply()
+            var pref = applicationContext.getSharedPreferences("MyPref", MODE_PRIVATE)
+            var editor = pref.edit()
             val intent = Intent(this, dashBoard::class.java)
             startActivity(intent)
-
+            editor.putInt("IsFirstTimeOpen", 0);
+            editor.apply()
             finish()
         } else {
             Toast.makeText(this, "Fields Can't be empty", Toast.LENGTH_LONG).show()

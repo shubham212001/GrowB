@@ -15,13 +15,22 @@ class InitialStartActivity() : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_initial_start)
         supportActionBar?.hide()
-
+        var pref = applicationContext.getSharedPreferences("MyPref", MODE_PRIVATE)
+        var editor = pref.edit()
+        editor.putInt("IsFirstTimeOpen", 1);
+        editor.apply()
+        val checker = pref.getInt("IsFirstTimeOpen", 0)
         val handler = Handler(Looper.getMainLooper())
         handler.postDelayed({
             //Delay block of 2 sec or 2000 msec
+//if(checker==1){
+//    val intent= Intent(this,MainActivity::class.java)
+//    startActivity(intent)
+//}else{
+    val intent= Intent(this,dashBoard::class.java)
+    startActivity(intent)
+//}
 
-  val intent= Intent(this,dashBoard::class.java)
-        startActivity(intent)
             finish()
                             }, 4000)
 
