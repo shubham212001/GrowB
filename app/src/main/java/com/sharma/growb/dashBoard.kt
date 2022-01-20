@@ -6,6 +6,7 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.tabs.TabLayout
 import com.sharma.growb.ScrollingFragments.page_adapter
+import com.sharma.growb.addingFragments.AdderActivity
 import kotlinx.android.synthetic.main.activity_dash_board.*
 
 
@@ -26,7 +27,7 @@ open class dashBoard : AppCompatActivity() {
         Dashboard.setText(data3)
         viewPager.adapter = page_adapter(supportFragmentManager)
 
-        val tabLayout = findViewById<TabLayout>(R.id.tabLayout)
+        val tabLayout = findViewById<TabLayout>(R.id.AddTabLayout)
         tabLayout.setupWithViewPager(viewPager)
 
         create_newButton.setOnClickListener {
@@ -46,7 +47,7 @@ open class dashBoard : AppCompatActivity() {
         }
         create_newButton.setOnClickListener{
 
-            val intent=Intent(this,AdderActivity::class.java)
+            val intent=Intent(this, AdderActivity::class.java)
             startActivity(intent)
 
         }
