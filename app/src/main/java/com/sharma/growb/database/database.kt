@@ -7,7 +7,7 @@ import androidx.room.Room
 import androidx.room.RoomDatabase
 import kotlinx.coroutines.internal.synchronized
 
-@Database(entities=[sales_entity::class], version = 1,exportSchema = false)
+@Database(entities= arrayOf(sales_entity::class), version =1,exportSchema = false)
 abstract class database : RoomDatabase() {
     abstract fun Dao(): dao
 

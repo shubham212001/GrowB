@@ -30,6 +30,7 @@ open class dashBoard : AppCompatActivity() {
         stock_button.setOnClickListener {
             val intent=Intent(this,StockActivity::class.java)
             startActivity(intent);
+            finish()
 
         }
         //        todorv.apply {

@@ -28,9 +28,9 @@ class StockActivity : AppCompatActivity() {
             database.getDatabase(this)
         }
         nxtButton.setOnClickListener {
-            val ItemID = item_id.text.toString()
+            val ItemID = FirmName.text.toString()
             val NOP = nop.text.toString()
-            val itemPrice = item_price.text.toString()
+            val itemPrice = contact.text.toString()
             if (ItemID.length != 0 && NOP.length != 0 && itemPrice.length != 0 ) {
 
                 GlobalScope.launch(Dispatchers.Main) {
@@ -43,11 +43,12 @@ class StockActivity : AppCompatActivity() {
                             )
                         )
                     }
-                    finish()
+
 
                 }
                 val intent=Intent(this,dashBoard::class.java)
                 startActivity(intent)
+                finish()
             }
             else {
                 Toast.makeText(this,"Fields Can't be empty", Toast.LENGTH_LONG).show()

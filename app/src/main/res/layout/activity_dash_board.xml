@@ -9,16 +9,15 @@
 
     <TextView
         android:id="@+id/Dashboard"
-        android:layout_width="183dp"
+        android:layout_width="284dp"
         android:layout_height="24dp"
-        android:layout_marginTop="96dp"
+        android:layout_marginTop="24dp"
         android:text="MK Associates Pvt .Ltd"
         android:textAlignment="center"
         android:textColor="#3BA538"
-        android:textSize="14sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.39"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -38,19 +37,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.225" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="133dp"
-        android:layout_height="76dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.458"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.015"
-        app:srcCompat="@drawable/company_logo" />
+        app:layout_constraintVertical_bias="0.272" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
@@ -61,7 +48,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.443">
+        app:layout_constraintVertical_bias="0.363">
 
         <com.google.android.material.tabs.TabItem
             android:layout_width="wrap_content"
@@ -81,8 +68,8 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
-        android:layout_width="420dp"
-        android:layout_height="378dp"
+        android:layout_width="407dp"
+        android:layout_height="433dp"
         android:layout_marginStart="1dp"
         android:layout_marginEnd="1dp"
         android:layout_marginBottom="1dp"
