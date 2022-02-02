@@ -2,7 +2,6 @@ package com.sharma.growb
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.provider.ContactsContract
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -14,8 +13,8 @@ class MainActivity : AppCompatActivity() {
         supportActionBar?.hide()
         var pref = applicationContext.getSharedPreferences("MyPref", MODE_PRIVATE)
         var editor = pref.edit()
-        nxtButton.setOnClickListener {
-        if (FirmName.length() != 0 && nop.length() != 0 && contact.length() != 0) {
+        add_item_in_sales.setOnClickListener {
+        if (FirmName.length() != 0 && nop.length() != 0 && item_price.length() != 0) {
 
 
             var companyName=FirmName.text.toString()

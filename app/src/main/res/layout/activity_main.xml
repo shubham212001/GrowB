@@ -124,7 +124,7 @@
         android:hint="Enter Your Address">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/contact"
+            android:id="@+id/item_price"
             android:layout_width="match_parent"
             android:layout_height="88dp"
             android:layout_marginTop="10sp"
@@ -154,7 +154,7 @@
 ">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/contact"
+            android:id="@+id/item_price"
             android:layout_width="match_parent"
             android:layout_height="84dp"
             android:layout_marginTop="10sp"
@@ -171,13 +171,14 @@
         android:orientation="horizontal" />
 
     <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-        android:id="@+id/nxtButton"
-        android:layout_width="76dp"
-        android:layout_height="41dp"
+        android:id="@+id/add_item_in_sales"
+        android:layout_width="wrap_content"
+        android:layout_height="37dp"
         android:layout_gravity="bottom|right"
         android:layout_margin="25sp"
 
-        android:text="Next" />
+        android:text="Save And Next"
+        android:textSize="12sp" />
 
 
 </LinearLayout>

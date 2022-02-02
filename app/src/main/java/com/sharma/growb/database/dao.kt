@@ -9,7 +9,7 @@ import androidx.room.*
         suspend fun add_sales(input: sales_entity): Long
 
 
-        @Query("Select * from SalesTable order by EntryId DESC")
+        @Query("Select * from SalesTable order by Billno DESC")
         fun get_all(): LiveData<List<sales_entity>>
 
 //        @Query("Select * from entity order by id ASC")

@@ -7,10 +7,6 @@ import android.widget.Toast
 import com.sharma.growb.database.database
 import com.sharma.growb.database.sales_entity
 import kotlinx.android.synthetic.main.activity_stock.*
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.GlobalScope
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.withContext
 
 
 const val DB_NAME = "database.db"
@@ -27,25 +23,25 @@ class StockActivity : AppCompatActivity() {
         val db by lazy {
             database.getDatabase(this)
         }
-        nxtButton.setOnClickListener {
+        add_item_in_sales.setOnClickListener {
             val ItemID = FirmName.text.toString()
             val NOP = nop.text.toString()
-            val itemPrice = contact.text.toString()
+            val itemPrice = item_price.text.toString()
             if (ItemID.length != 0 && NOP.length != 0 && itemPrice.length != 0 ) {
 
-                GlobalScope.launch(Dispatchers.Main) {
-                    val id = withContext(Dispatchers.IO) {
-                        return@withContext db.Dao().add_sales(
-                            sales_entity(
-                                ItemID ,
-                                NOP,
-                                itemPrice
-                            )
-                        )
-                    }
-
-
-                }
+//                GlobalScope.launch(Dispatchers.Main) {
+//                    val id = withContext(Dispatchers.IO) {
+//                        return@withContext db.Dao().add_sales(
+//                            sales_entity(
+//                                ItemID ,
+//                                NOP,
+//                                itemPrice
+//                            )
+//                        )
+//                    }
+//
+//
+//                }
                 val intent=Intent(this,dashBoard::class.java)
                 startActivity(intent)
                 finish()

@@ -32,7 +32,7 @@ class InitialStartActivity() : AppCompatActivity() {
 //}
 
             finish()
-                            }, 4000)
+                            }, 600)
 
 
 

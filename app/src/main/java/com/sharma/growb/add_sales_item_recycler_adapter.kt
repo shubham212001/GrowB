@@ -3,18 +3,20 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.sharma.growb.database.item
 import com.sharma.growb.database.sales_entity
+import kotlinx.android.synthetic.main.add_sales_item_in_recyclerview.view.*
 import kotlinx.android.synthetic.main.sales_item.view.*
 import java.text.SimpleDateFormat
 import java.util.*
 
-class sales_adapter(val list: List<sales_entity>,val Listener:listener) : RecyclerView.Adapter<sales_adapter.TodoViewHolder>() {
+class add_sales_item_recycler_adapter(val list: List<item>) : RecyclerView.Adapter<add_sales_item_recycler_adapter.TodoViewHolder>() {
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TodoViewHolder {
         return TodoViewHolder(
-            LayoutInflater.from(parent.context)
-                .inflate(R.layout.sales_item, parent, false)
+                LayoutInflater.from(parent.context)
+                        .inflate(R.layout.add_sales_item_in_recyclerview, parent, false)
         )
     }
 
@@ -37,11 +39,11 @@ class sales_adapter(val list: List<sales_entity>,val Listener:listener) : Recycl
 
 
     class TodoViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        fun bind(todoModel: sales_entity) {
+        fun bind(todoModel: item) {
             with(itemView) {
-                sale_id.text = todoModel.PartyName.toUpperCase()
-                sale_nop.text = todoModel.Billno.toString().toUpperCase()
-                salePrice.text = todoModel.PayAmt.toString().toUpperCase()
+                show_item_id.text = todoModel.Item_Id.toUpperCase()
+                show_item_qty.text = todoModel.No_of_purchase.toString().toUpperCase()
+                show_item_price.text = todoModel.item_selling_price.toString().toUpperCase()
 //                user_date.text = todoModel.date
 //                user_time.text = todoModel.time
 
@@ -63,12 +65,5 @@ class sales_adapter(val list: List<sales_entity>,val Listener:listener) : Recycl
 //
 //        }
     }
-
-}
-
-interface listener {
-    fun delete_task(input:sales_entity)
-    fun share(input:sales_entity)
-    fun update_task(input: sales_entity)
 
 }

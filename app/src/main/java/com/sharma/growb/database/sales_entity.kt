@@ -3,13 +3,14 @@ import androidx.room.Entity
 import androidx.room.PrimaryKey
 @Entity(tableName = "SalesTable")
 public class sales_entity(
-    val ItemId:String,
-    val NOP:String,
-    val Price:String,
+val PartyName:String,
+val Billno:String,
+val PayAmt:Int
 
-    ){
+){
     @PrimaryKey(autoGenerate = true)
-    var EntryId:Int=0
+    var EntryId=0
+
 }
 
 

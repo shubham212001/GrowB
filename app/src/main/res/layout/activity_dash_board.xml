@@ -10,7 +10,7 @@
     <TextView
         android:id="@+id/Dashboard"
         android:layout_width="284dp"
-        android:layout_height="24dp"
+        android:layout_height="32dp"
         android:layout_marginTop="24dp"
         android:text="MK Associates Pvt .Ltd"
         android:textAlignment="center"
@@ -34,10 +34,10 @@
         app:backgroundTint="@color/teal_200"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.265" />
+        app:layout_constraintVertical_bias="0.262" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/AddTabLayout"
@@ -83,6 +83,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="To Collect (INR)"
+        android:textColor="#2F6330"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.128"
@@ -95,12 +97,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="To Pay (INR)"
+        android:textColor="#AF2424"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.558"
+        app:layout_constraintHorizontal_bias="0.576"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.126" />
+        app:layout_constraintVertical_bias="0.119" />
 
     <EditText
         android:id="@+id/tocollect"
@@ -128,20 +132,17 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.159" />
 
-    <Button
+    <ImageButton
         android:id="@+id/saveChanges"
-        android:layout_width="102dp"
-        android:layout_height="68dp"
-        android:background="#2E7EBA"
-        android:backgroundTint="#2E7EBA"
-        android:text="Save Changes"
-        android:textSize="12sp"
+        android:layout_width="62dp"
+        android:layout_height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.949"
+        app:layout_constraintHorizontal_bias="0.899"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.135" />
+        app:layout_constraintVertical_bias="0.152"
+        app:srcCompat="@drawable/save" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
